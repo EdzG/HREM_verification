@@ -178,7 +178,8 @@ def eval_ensemble(results_paths, fold5=False):
 def evalrank(model_path, opt=None, tokenizer=None, model=None, split='dev', fold5=False, save_path=None, data_path=None):
 
     # load model and options
-    checkpoint = torch.load(model_path, map_location='cuda')
+    #EG - adding weights_only=False
+    checkpoint = torch.load(model_path, map_location='cuda', weights_only=False)
     
     # (1) construct opt
     if opt is None:

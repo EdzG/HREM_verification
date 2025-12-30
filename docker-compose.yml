@@ -1,0 +1,74 @@
+services:
+  train:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: hrem-rocm:dev
+    working_dir: /workspace
+    devices:
+      - /dev/kfd
+      - /dev/dri
+    group_add:
+      - video
+    security_opt:
+      - seccomp=unconfined
+    ipc: host
+    shm_size: "8g"
+    environment:
+      # Keep paths aligned with the paper repo README
+      DATA_PATH: /workspace/data
+      BERT_PATH: /workspace/data/bert-base-uncased
+      RUNS_PATH: /workspace/runs      # Optional: limit which GPU is visible (0 = first GPU)
+      HIP_VISIBLE_DEVICES: "0"
+    volumes:
+      - ./:/workspace
+      - ./data:/workspace/data
+      - ./runs:/workspace/runs      # Caches to avoid repeated downloads
+      - hf_cache:/root/.cache/huggingface
+      - torch_cache:/root/.cache/torch  
+  jupyter:
+    image: hrem-rocm:dev
+    depends_on:
+      - train
+    working_dir: /workspace
+    devices:
+      - /dev/kfd
+      - /dev/dri
+    group_add:
+      - video
+    security_opt:
+      - seccomp=unconfined
+    ipc: host
+    shm_size: "8g"
+    ports:
+      - "8888:8888"
+    environment:
+      DATA_PATH: /workspace/data
+      BERT_PATH: /workspace/data/bert-base-uncased
+      RUNS_PATH: /workspace/runs
+      HIP_VISIBLE_DEVICES: "0"
+    volumes:
+      - ./:/workspace
+      - ./data:/workspace/data
+      - ./runs:/workspace/runs
+      - hf_cache:/root/.cache/huggingface
+      - torch_cache:/root/.cache/torch
+    command: >
+      bash -lc "jupyter lab
+      --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+      --NotebookApp.token='' --NotebookApp.password=''"
+  tensorboard:
+    image: hrem-rocm:dev
+    working_dir: /workspace
+    volumes:
+      - ./runs:/workspace/runs
+    ports:
+      - "6006:6006"
+    command: > 
+      bash -lc "python -m pip install -U tensorboard && tensorboard --logdir /workspace/runs --host 0.0.0.0 --port 6006"
+volumes:
+  hf_cache:
+  torch_cache:
+
+
+

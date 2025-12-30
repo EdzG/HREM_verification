@@ -1,0 +1,18 @@
+ Container hrem_verification-train-run-a7c86c420d0f Creating 
+ Container hrem_verification-train-run-a7c86c420d0f Created 
+INFO:root:Evaluating runs/f30k_test...
+/opt/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(
+INFO:lib.evaluation:Loading dataset.
+INFO:lib.evaluation:Computing embeddings.
+INFO:lib.evaluation:Test: [0/40]		Batch-Time 3.153 (3.153)	
+INFO:lib.evaluation:Test: [10/40]		Batch-Time 0.488 (0.626)	
+INFO:lib.evaluation:Test: [20/40]		Batch-Time 0.381 (0.496)	
+INFO:lib.evaluation:Test: [30/40]		Batch-Time 0.745 (0.468)	
+INFO:lib.evaluation:Images: 1000, Captions: 5000
+INFO:lib.evaluation:Computing results.
+INFO:lib.evaluation:Start evaluation.
+INFO:lib.evaluation:Save the similarity into runs/f30k_test/results_f30k.npy
+INFO:lib.evaluation:rsum: 519.0
+INFO:lib.evaluation:Image to text (R@1, R@5, R@10): 82.1 96.8 98.2
+INFO:lib.evaluation:Text to image (R@1, R@5, R@10): 63.3 86.6 92.0

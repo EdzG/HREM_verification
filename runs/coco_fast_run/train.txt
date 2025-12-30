@@ -1,0 +1,65 @@
+2025-12-30 09:04:47,391 Namespace(data_path='data/', dataset='coco', margin=0.2, num_epochs=20, batch_size=256, embed_size=1024, grad_clip=2.0, learning_rate=0.0005, workers=8, log_step=200, val_step=500, logger_name='runs/coco_fast_run', model_name='runs/coco_fast_run', max_violation=False, img_dim=2048, no_imgnorm=False, no_txtnorm=False, vse_mean_warmup_epochs=1, multi_gpu=0, size_augment=1, mask_repeat=1, save_results=1, gpu_id=0, bert_path='/model/darkpromise/VSE_backbone/bert-base-uncased', lr_schedules=[15], decay_rate=0.1, base_loss='trip', gnn_loss='trip', warmup=8000, residual_weight=0.8, num_layers_enc=1, nhead=16, dropout=0.1, graph_lr_factor=1.0, mask_weight=1.0, threshold=0.5, topk=10, reg_loss_weight=10, norm_input=1, cross_loss=1)
+2025-12-30 09:08:30,906 Number of images for train-set: 113287
+2025-12-30 09:08:34,790 Log saving path: runs/coco_fast_run
+2025-12-30 09:08:34,790 Models saving path: runs/coco_fast_run
+2025-12-30 09:08:34,790 image encoder trainable parameters: 9.52M
+2025-12-30 09:08:34,792 txt encoder trainable parameters: 111.17M
+2025-12-30 09:08:34,792 criterion trainable parameters: 6.01M
+2025-12-30 09:15:10,281 Epoch: [0][200/2212]	Iter 200  lr 0.0005  Loss 102.7296 (103.8885)	Batch-Time 2.43 (1.98)	
+2025-12-30 09:21:45,236 Epoch: [0][400/2212]	Iter 400  lr 0.0005  Loss 92.3340 (101.6429)	Batch-Time 1.88 (1.98)	
+2025-12-30 09:28:26,711 Epoch: [0][600/2212]	Iter 600  lr 0.0005  Loss 85.8034 (98.4232)	Batch-Time 1.97 (1.99)	
+2025-12-30 09:35:08,010 Epoch: [0][800/2212]	Iter 800  lr 0.0005  Loss 83.4790 (95.6581)	Batch-Time 1.60 (1.99)	
+2025-12-30 09:41:40,425 Epoch: [0][1000/2212]	Iter 1000  lr 0.0005  Loss 86.3951 (93.4527)	Batch-Time 2.04 (1.99)	
+2025-12-30 09:48:10,108 Epoch: [0][1200/2212]	Iter 1200  lr 0.0005  Loss 78.3903 (91.5946)	Batch-Time 3.16 (1.98)	
+2025-12-30 09:54:49,941 Epoch: [0][1400/2212]	Iter 1400  lr 0.0005  Loss 79.1282 (89.9675)	Batch-Time 1.94 (1.98)	
+2025-12-30 10:01:12,028 Epoch: [0][1600/2212]	Iter 1600  lr 0.0005  Loss 82.6458 (88.5661)	Batch-Time 2.20 (1.97)	
+2025-12-30 10:07:42,382 Epoch: [0][1800/2212]	Iter 1800  lr 0.0005  Loss 77.4051 (87.3835)	Batch-Time 1.54 (1.97)	
+2025-12-30 10:14:08,285 Epoch: [0][2000/2212]	Iter 2000  lr 0.0005  Loss 79.1049 (86.3114)	Batch-Time 2.45 (1.97)	
+2025-12-30 10:20:33,536 Epoch: [0][2200/2212]	Iter 2200  lr 0.0005  Loss 75.8187 (85.3917)	Batch-Time 1.99 (1.96)	
+2025-12-30 10:21:02,799 Test: [0/98]		Batch-Time 3.524 (3.524)	
+2025-12-30 10:22:07,966 Image to text (R@1, R@5, R@10): 49.7, 77.2, 85.9
+2025-12-30 10:22:10,491 Text to image (R@1, R@5, R@10): 34.2, 62.9, 74.9
+2025-12-30 10:22:10,491 Current rsum is 384.8
+2025-12-30 10:22:10,500 Epoch: [0], Best rsum: 384.8
+2025-12-30 10:28:15,723 Epoch: [1][188/2212]	Iter 2400  lr 0.0005  Loss 69.4115 (73.5754)	Batch-Time 1.67 (1.94)	
+2025-12-30 10:35:00,425 Epoch: [1][388/2212]	Iter 2600  lr 0.0005  Loss 73.7827 (73.3450)	Batch-Time 1.72 (1.98)	
+2025-12-30 10:41:35,590 Epoch: [1][588/2212]	Iter 2800  lr 0.0005  Loss 74.2486 (73.0364)	Batch-Time 1.77 (1.98)	
+2025-12-30 10:48:05,998 Epoch: [1][788/2212]	Iter 3000  lr 0.0005  Loss 75.2371 (72.7986)	Batch-Time 1.67 (1.97)	
+2025-12-30 10:54:31,133 Epoch: [1][988/2212]	Iter 3200  lr 0.0005  Loss 70.8332 (72.5045)	Batch-Time 1.78 (1.96)	
+2025-12-30 11:01:00,246 Epoch: [1][1188/2212]	Iter 3400  lr 0.0005  Loss 70.6732 (72.2612)	Batch-Time 1.87 (1.96)	
+2025-12-30 11:07:37,110 Epoch: [1][1388/2212]	Iter 3600  lr 0.0005  Loss 71.1008 (72.0004)	Batch-Time 1.56 (1.96)	
+2025-12-30 11:14:13,466 Epoch: [1][1588/2212]	Iter 3800  lr 0.0005  Loss 67.2399 (71.7166)	Batch-Time 1.55 (1.97)	
+2025-12-30 11:20:44,461 Epoch: [1][1788/2212]	Iter 4000  lr 0.0005  Loss 67.5947 (71.4639)	Batch-Time 1.71 (1.96)	
+2025-12-30 11:27:17,118 Epoch: [1][1988/2212]	Iter 4200  lr 0.0005  Loss 68.3156 (71.2445)	Batch-Time 1.82 (1.96)	
+2025-12-30 11:33:40,227 Epoch: [1][2188/2212]	Iter 4400  lr 0.0005  Loss 74.6833 (71.0409)	Batch-Time 1.55 (1.96)	
+2025-12-30 11:34:31,010 Test: [0/98]		Batch-Time 3.433 (3.432)	
+2025-12-30 11:35:36,153 Image to text (R@1, R@5, R@10): 55.0, 81.1, 88.8
+2025-12-30 11:35:38,169 Text to image (R@1, R@5, R@10): 37.1, 67.0, 78.3
+2025-12-30 11:35:38,169 Current rsum is 407.3
+2025-12-30 11:35:38,175 Epoch: [1], Best rsum: 407.3
+2025-12-30 11:41:32,390 Epoch: [2][176/2212]	Iter 4600  lr 0.0005  Loss 68.8415 (66.8190)	Batch-Time 1.68 (1.99)	
+2025-12-30 11:48:15,125 Epoch: [2][376/2212]	Iter 4800  lr 0.0005  Loss 61.8240 (66.6865)	Batch-Time 1.89 (2.00)	
+2025-12-30 11:54:40,811 Epoch: [2][576/2212]	Iter 5000  lr 0.0005  Loss 62.7449 (66.5740)	Batch-Time 1.56 (1.98)	
+2025-12-30 12:01:22,748 Epoch: [2][776/2212]	Iter 5200  lr 0.0005  Loss 69.8697 (66.6025)	Batch-Time 1.61 (1.99)	
+2025-12-30 12:07:56,142 Epoch: [2][976/2212]	Iter 5400  lr 0.0005  Loss 65.6480 (66.4600)	Batch-Time 1.60 (1.98)	
+2025-12-30 12:14:29,824 Epoch: [2][1176/2212]	Iter 5600  lr 0.0005  Loss 69.6218 (66.3959)	Batch-Time 1.49 (1.98)	
+2025-12-30 12:21:00,756 Epoch: [2][1376/2212]	Iter 5800  lr 0.0005  Loss 64.6102 (66.2967)	Batch-Time 1.94 (1.98)	
+2025-12-30 12:27:28,137 Epoch: [2][1576/2212]	Iter 6000  lr 0.0005  Loss 73.5251 (66.2705)	Batch-Time 1.77 (1.97)	
+2025-12-30 12:34:02,526 Epoch: [2][1776/2212]	Iter 6200  lr 0.0005  Loss 66.0448 (66.1813)	Batch-Time 1.94 (1.97)	
+2025-12-30 12:40:26,405 Epoch: [2][1976/2212]	Iter 6400  lr 0.0005  Loss 62.7031 (66.0833)	Batch-Time 1.76 (1.97)	
+2025-12-30 12:46:56,031 Epoch: [2][2176/2212]	Iter 6600  lr 0.0005  Loss 67.7947 (65.9841)	Batch-Time 2.04 (1.96)	
+2025-12-30 12:48:31,590 Test: [0/98]		Batch-Time 26.917 (26.915)	
+2025-12-30 12:51:15,457 Image to text (R@1, R@5, R@10): 56.1, 82.1, 90.0
+2025-12-30 12:51:17,443 Text to image (R@1, R@5, R@10): 38.5, 68.5, 79.7
+2025-12-30 12:51:17,443 Current rsum is 415.0
+2025-12-30 12:51:17,448 Epoch: [2], Best rsum: 415.0
+2025-12-30 12:56:43,362 Epoch: [3][164/2212]	Iter 6800  lr 0.0005  Loss 63.3468 (62.6285)	Batch-Time 1.98 (1.97)	
+2025-12-30 13:03:20,936 Epoch: [3][364/2212]	Iter 7000  lr 0.0005  Loss 63.7781 (62.7391)	Batch-Time 1.60 (1.98)	
+2025-12-30 13:09:39,851 Epoch: [3][564/2212]	Iter 7200  lr 0.0005  Loss 64.9061 (62.5992)	Batch-Time 1.83 (1.95)	
+2025-12-30 13:16:09,786 Epoch: [3][764/2212]	Iter 7400  lr 0.0005  Loss 61.9575 (62.7936)	Batch-Time 1.93 (1.95)	
+2025-12-30 13:22:43,222 Epoch: [3][964/2212]	Iter 7600  lr 0.0005  Loss 60.1850 (62.7230)	Batch-Time 2.12 (1.95)	
+2025-12-30 13:30:03,758 Epoch: [3][1164/2212]	Iter 7800  lr 0.0005  Loss 68.6344 (62.7349)	Batch-Time 2.03 (2.00)	
+2025-12-30 13:36:40,972 Epoch: [3][1364/2212]	Iter 8000  lr 0.0005  Loss 62.3666 (62.7596)	Batch-Time 1.94 (1.99)	
+2025-12-30 13:43:55,703 Epoch: [3][1564/2212]	Iter 8200  lr 0.0005  Loss 233.6514 (87.2619)	Batch-Time 1.93 (2.02)	
+2025-12-30 13:50:55,338 Epoch: [3][1764/2212]	Iter 8400  lr 0.0005  Loss 250.7021 (105.9935)	Batch-Time 1.93 (2.03)	
+2025-12-30 13:57:58,925 Epoch: [3][1964/2212]	Iter 8600  lr 0.0005  Loss 257.3495 (120.8255)	Batch-Time 2.02 (2.04)	

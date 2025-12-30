@@ -113,3 +113,24 @@ The following tables show the results of image-to-text retrieval on **MSCOCO** a
   year={2023}
 }
 ```
+
+
+## JG
+First download datasets, and features then 
+### build services
+ docker compose build
+ ### run command in one off instance 
+ docker compose run --rm train python /download_bert.py
+
+ ## Run training
+ docker compose run - -rm train bash -lc \
+  "python train.py \
+    --batch_size 128 \
+    --data_path data/ \
+    --dataset f30k \
+    --logger_name runs/f30k_test \
+    --mask_weight 1.0"
+    
+ ## run tensorboard
+
+ docker compose up tensorboard

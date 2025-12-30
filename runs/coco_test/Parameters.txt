@@ -1,0 +1,80 @@
+data_path
+	data/
+dataset
+	coco
+margin
+	0.2
+num_epochs
+	10
+batch_size
+	128
+embed_size
+	1024
+grad_clip
+	2.0
+learning_rate
+	0.0005
+workers
+	8
+log_step
+	200
+val_step
+	500
+logger_name
+	runs/coco_test
+model_name
+	runs/coco_test
+max_violation
+	False
+img_dim
+	2048
+no_imgnorm
+	False
+no_txtnorm
+	False
+vse_mean_warmup_epochs
+	1
+multi_gpu
+	0
+size_augment
+	1
+mask_repeat
+	1
+save_results
+	1
+gpu_id
+	0
+bert_path
+	/model/darkpromise/VSE_backbone/bert-base-uncased
+lr_schedules
+	[15, 25]
+decay_rate
+	0.1
+base_loss
+	trip
+gnn_loss
+	trip
+warmup
+	8000
+residual_weight
+	0.8
+num_layers_enc
+	1
+nhead
+	16
+dropout
+	0.1
+graph_lr_factor
+	1.0
+mask_weight
+	1.5
+threshold
+	0.5
+topk
+	10
+reg_loss_weight
+	10
+norm_input
+	1
+cross_loss
+	1

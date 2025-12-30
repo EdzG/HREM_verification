@@ -118,18 +118,27 @@ The following tables show the results of image-to-text retrieval on **MSCOCO** a
 ## JG
 First download datasets, and features then 
 ### build services
- docker compose build
+docker compose build
  ### run command in one off instance 
- docker compose run --rm train python /download_bert.py
+docker compose run --rm train python /download_bert.py
 
  ## Run training
- docker compose run - -rm train bash -lc \
+ docker compose run --rm train bash -lc \
   "python train.py \
     --batch_size 128 \
     --data_path data/ \
     --dataset f30k \
     --logger_name runs/f30k_test \
     --mask_weight 1.0"
+
+docker compose run --rm train bash -lc \
+ "python train.py \
+  --batch_size 128 \
+   --data_path data/ \
+   --dataset coco \
+   --num_epochs 10 \
+   --logger_name runs/coco_test \
+    --mask_weight 1.5"
     
  ## run tensorboard
 
